@@ -21,7 +21,7 @@ namespace ConsoleApplication3
             Console.WriteLine(s);
             /******************************FIZZBUZZ*******************************/
             fizzBuzz();
-            
+
             /****************************TAX CALCULATOR***************************/
             Console.WriteLine("********** Tax Calculator ***********");
             Console.WriteLine("Enter income amount: ");
@@ -53,7 +53,7 @@ namespace ConsoleApplication3
             Console.WriteLine(reverseChar(strReverse));
             /********Reverse both the string and characters of the string********/
             reverseStr(testStr);
-            /******************GET TIMESTAMP IN SECONDS AND PRINT*********************/
+            /******************CHECK TIMESTAMP IN SECONDS*********************/
             getTime();
         }
         public static double incomeTax(String income)
@@ -66,7 +66,8 @@ namespace ConsoleApplication3
                 remainder = total - 20000;
             }
 
-            if (total > 20000 && total <= 50000){
+            if (total > 20000 && total <= 50000)
+            {
                 tax += .10 * remainder;
             }
 
@@ -83,16 +84,19 @@ namespace ConsoleApplication3
         public static void getTime()
         {
             DateTime now = DateTime.Now;
-            if(now.Second == 0){  
+            if (now.Second == 0)
+            {
                 Console.WriteLine("The new minute is just beginning");
             }
-            else if(now.Second == 15){
+            else if (now.Second == 15)
+            {
                 Console.WriteLine("We're one quarter done");
             }
-            else if(now.Second == 30){
+            else if (now.Second == 30)
+            {
                 Console.WriteLine("Half way there");
             }
-            else if(now.Second == 45)
+            else if (now.Second == 45)
             {
                 Console.WriteLine("Getting close to done");
             }
@@ -104,10 +108,10 @@ namespace ConsoleApplication3
         public static char[] reverseChar(string input)
         {
             char[] charArray = new char[input.Length];
-            for(int i = input.Length - 1; i >= 0; i--)
+            for (int i = input.Length - 1; i >= 0; i--)
             {
                 charArray[(input.Length - 1) - i] = input[i];
-            } 
+            }
             return charArray;
         }
         public static void reverseStr(string[] input)
@@ -136,7 +140,7 @@ namespace ConsoleApplication3
                     Console.Write("Buzz");
                 }
                 Console.WriteLine();
-            }  
-        }   
+            }
+        }
     }
 }
