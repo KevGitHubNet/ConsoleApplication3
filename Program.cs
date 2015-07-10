@@ -10,10 +10,15 @@ namespace ConsoleApplication3
     class Program
     {
         private static double tax;
-        public static string[] testStr = new string[] { "back ", "to ", "basics" };
+        public static string[] testStr = new string[] { "back ", "to", " basics" };
+
         static void Main(string[] args)
         {
-            reverseChar("Hello");
+            /******************************REVERSE STRING***********************/
+            String output = "this is the time";
+            char[] s = output.ToCharArray();
+            Array.Reverse(s);
+            Console.WriteLine(s);
             /******************************FIZZBUZZ*******************************/
             fizzBuzz();
             
@@ -106,12 +111,16 @@ namespace ConsoleApplication3
             return charArray;
         }
         public static void reverseStr(string[] input)
+        //public static string[] reverseStr(string[] input)
         {
+            string[] strArray = new string[input.Length];
             for (int i = input.Length - 1; i >= 0; i--)
             {
+                //strArray[(input.Length - 1) - i] = input[i];
                 Console.Write(reverseChar(input[i]));
             }
             Console.WriteLine();
+            //return strArray;
         }
         public static void fizzBuzz()
         {
