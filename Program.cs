@@ -55,7 +55,8 @@ namespace ConsoleApplication3
             reverseStr(testStr);
             /******************CHECK TIMESTAMP IN SECONDS*********************/
             getTime();
-        }
+        }   //end of main method
+
         public static double incomeTax(String income)
         {
             double remainder = 0.0;
